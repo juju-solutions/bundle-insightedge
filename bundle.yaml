@@ -14,7 +14,7 @@ services:
       gui-y: "100"
     expose: true
   insightedge:
-    charm: cs:~bigdata-dev/insightedge-2
+    charm: cs:~gigaspaces/insightedge-core-0
     annotations:
       gui-x: "200"
       gui-y: "100"
