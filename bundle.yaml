@@ -1,0 +1,24 @@
+series: xenial
+services:
+  spark:
+    charm: cs:~bigdata-dev/apache-spark-82
+    num_units: 1
+    annotations:
+      gui-x: "100"
+      gui-y: "0"
+    constraints: mem=7G
+  zeppelin:
+    charm: cs:~bigdata-dev/apache-zeppelin-54
+    annotations:
+      gui-x: "0"
+      gui-y: "100"
+    expose: true
+  insightedge:
+    charm: cs:~bigdata-dev/insightedge-2
+    annotations:
+      gui-x: "200"
+      gui-y: "100"
+relations:
+  - [zeppelin, spark]
+  - [insightedge, spark]
+  - [insightedge, zeppelin]
