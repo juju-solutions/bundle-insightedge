@@ -20,5 +20,5 @@ services:
     expose: true
 relations:
   - [insightedge-zeppelin, spark]
-  - [insightedge, spark]
-  - [insightedge, insightedge-zeppelin]
+  - [insightedge-core, spark]
+  - [insightedge-core, insightedge-zeppelin]
