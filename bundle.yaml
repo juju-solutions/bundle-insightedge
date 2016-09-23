@@ -1,23 +1,16 @@
 series: xenial
 services:
-  spark:
-    charm: cs:apache-spark-12
-    num_units: 1
+  insightedge-spark:
+    charm: cs:~gigaspaces/insightedge-spark-1
     annotations:
-      gui-x: "250"
+      gui-x: "0"
       gui-y: "0"
     constraints: mem=7G
-  insightedge-core:
-    charm: cs:~gigaspaces/insightedge-core-3
-    annotations:
-      gui-x: "500"
-      gui-y: "250"
   insightedge-zeppelin:
     charm: cs:~gigaspaces/insightedge-zeppelin-1
     annotations:
-      gui-x: "0"
-      gui-y: "250"
+      gui-x: "250"
+      gui-y: "0"
     expose: true
 relations:
-  - [insightedge-zeppelin, spark]
-  - [insightedge-core, spark]
+  - [insightedge-zeppelin, insightedge-spark]
