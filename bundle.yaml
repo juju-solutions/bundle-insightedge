@@ -9,7 +9,7 @@ services:
   insightedge-zeppelin:
     charm: cs:~gigaspaces/insightedge-zeppelin-1
     annotations:
-      gui-x: "250"
+      gui-x: "500"
       gui-y: "0"
     expose: true
 relations:
